@@ -458,6 +458,7 @@ transition:color var(--trasform-duration--) var(---transition-function--), backg
     display:block;
     width: 360px;
     transform:box-shadow var(--trasform-duration--) var(---transition-function--) ;
+   
 }
 .link-portfolio:hover,
 .link-portfolio:focus{
@@ -490,7 +491,7 @@ padding-top: 40px;
 padding-left: 32px;
 padding-right: 32px;
 transform: translate(0, 100%);
-transition: transform var(--trasform-duration--) var(---transition-function--) ;
+
 
 }
 .portfolio-cards{
@@ -498,6 +499,11 @@ transition: transform var(--trasform-duration--) var(---transition-function--) ;
     overflow: hidden;
    
 }
+.link-portfolio .text-relative{transition: transform var(--trasform-duration--) var(---transition-function--) ;
+
+}
+
+
 .link-portfolio:hover .text-relative,
 .link-portfolio:focus .text-relative{
     transform: translate(0,0);
@@ -511,23 +517,27 @@ transition: transform var(--trasform-duration--) var(---transition-function--) ;
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
+    
 
 }
 .backdrop.is-hidden{
+   
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 .modal{
+   
     position: absolute;
     top:50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1);
     background: #FCFCFC;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 width: 408px;
 height: 576px;
+transition: transform var(--trasform-duration--) var(---transition-function--);
 }
 .modal-close-btn{
     position: absolute;
@@ -547,6 +557,11 @@ height: 576px;
 .modal-close-btn:focus{
     background-color: #404BBF;
 
+}
+.backdrop.is-hidden .modal{
+  
+    transform: translate(-50%,-50%) scale(0);
+    
 }
 .close{
     transition:fill var(--trasform-duration--) var(---transition-function--);
